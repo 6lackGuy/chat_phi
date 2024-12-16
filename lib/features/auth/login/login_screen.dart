@@ -63,7 +63,9 @@ class LoginScreen extends StatelessWidget {
                               hintText: "Password",
                               iconss: true,
                             ),
-                            ForgotPasswordButton(onPressed: () {}),
+                            ForgotPasswordButton(
+                              onPressed: () {},
+                            ),
                             const SizedBox(height: 19),
                             RegularButton(
                               title: "Sign In",
@@ -72,12 +74,15 @@ class LoginScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const HomeScreen()),
+                                    builder: (context) => const HomeScreen(),
+                                  ),
                                 );
                               },
                             ),
                             const SizedBox(height: 19),
-                            CreateAccountButton(onPressed: () {}),
+                            CreateAccountButton(
+                              onPressed: () {},
+                            ),
                           ],
                         ),
                       ),
