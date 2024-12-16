@@ -59,7 +59,9 @@ class _RegularButtonState extends State<RegularButton>
         child: SizedBox(
           height: 47.h,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20).w,
+            padding: EdgeInsets.symmetric(
+                    horizontal: MediaQuery.sizeOf(context).width > 600 ? 8 : 20)
+                .w,
             child: Container(
               decoration: BoxDecoration(
                 color: black,

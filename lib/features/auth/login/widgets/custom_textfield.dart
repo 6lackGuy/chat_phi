@@ -39,8 +39,16 @@ class _CustomLoginTextFieldState extends State<CustomLoginTextField> {
                 fontWeight: FontWeight.w400,
                 color: hintTextColor,
               ),
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 0).w,
+              contentPadding: EdgeInsets.only(
+                left: MediaQuery.sizeOf(context).width > 600
+                    ? 8
+                    : 20, // Keep the left padding constant
+                right: MediaQuery.sizeOf(context).width > 600
+                    ? 8
+                    : 20, // Keep the right padding constant
+                top: 0,
+                bottom: 0,
+              ).w,
               enabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(
                   color: textFieldGrey,

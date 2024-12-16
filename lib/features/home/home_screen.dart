@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 // preferredSize: const Size.fromHeight(90), // Height of the AppBar
                 Padding(
@@ -119,6 +120,30 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            Positioned(
+              bottom: 35,
+              right: MediaQuery.sizeOf(context).width > 600
+                  ? MediaQuery.sizeOf(context).width / 2.2
+                  : MediaQuery.sizeOf(context).width / 3.2,
+              child: Container(
+                height: 39,
+                width: 162,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF000000),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Text(
+                    "Send new message",
+                    style: GoogleFonts.plusJakartaSans(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white, // Adjust text color
+                    ),
+                  ),
+                ),
+              ),
             ),
             Positioned(
               bottom: 40,

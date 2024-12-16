@@ -11,7 +11,9 @@ class ForgotPasswordButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10).w,
+      padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.sizeOf(context).width > 600 ? 4 : 10)
+          .w,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
